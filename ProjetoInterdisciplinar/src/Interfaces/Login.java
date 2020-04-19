@@ -5,6 +5,8 @@
  */
 package Interfaces;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mateus
@@ -30,7 +32,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txtpassword = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtname1 = new javax.swing.JTextField();
+        txtrgm = new javax.swing.JTextField();
         btnlogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,12 +45,6 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("SENHA:");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(50, 130, 70, 22);
-
-        txtpassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpasswordActionPerformed(evt);
-            }
-        });
         getContentPane().add(txtpassword);
         txtpassword.setBounds(130, 120, 180, 40);
 
@@ -56,14 +52,8 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("RGM:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(60, 60, 60, 22);
-
-        txtname1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtname1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtname1);
-        txtname1.setBounds(130, 50, 180, 40);
+        getContentPane().add(txtrgm);
+        txtrgm.setBounds(130, 50, 180, 40);
 
         btnlogin.setBackground(new java.awt.Color(255, 255, 255));
         btnlogin.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -82,16 +72,11 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpasswordActionPerformed
-
-    private void txtname1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtname1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtname1ActionPerformed
-
     private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
         // TODO add your handling code here:
+        TelaPrincipal telap = new TelaPrincipal();
+        
+        telap.setVisible(true);
     }//GEN-LAST:event_btnloginActionPerformed
 
     /**
@@ -133,7 +118,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnlogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtname1;
     private javax.swing.JTextField txtpassword;
+    private javax.swing.JTextField txtrgm;
     // End of variables declaration//GEN-END:variables
 }
