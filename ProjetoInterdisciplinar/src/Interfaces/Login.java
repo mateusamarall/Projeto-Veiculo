@@ -45,6 +45,8 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("SENHA:");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(50, 130, 70, 22);
+
+        txtpassword.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtpassword);
         txtpassword.setBounds(130, 120, 180, 40);
 
@@ -52,6 +54,8 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("RGM:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(60, 60, 60, 22);
+
+        txtrgm.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtrgm);
         txtrgm.setBounds(130, 50, 180, 40);
 
@@ -74,9 +78,21 @@ public class Login extends javax.swing.JFrame {
 
     private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
         // TODO add your handling code here:
-        TelaPrincipal telap = new TelaPrincipal();
+        if(txtrgm.getText().equals("") || txtrgm == null || txtpassword.getText().equals("") || txtpassword== null){
+            
+            txtrgm.setText("");
+            txtpassword.setText("");
+            txtrgm.requestFocus();
+            
+            JOptionPane.showMessageDialog(null, "Usuário não encontrado digite novamente");
+            
+        }
+        if(!(txtrgm.getText().equals("") || txtrgm == null || txtpassword.getText().equals("") || txtpassword== null)){
+            TelaPrincipal telap = new TelaPrincipal();
         
         telap.setVisible(true);
+        }
+        
     }//GEN-LAST:event_btnloginActionPerformed
 
     /**

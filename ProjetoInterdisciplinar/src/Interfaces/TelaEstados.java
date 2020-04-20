@@ -5,6 +5,8 @@
  */
 package Interfaces;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mateus
@@ -49,6 +51,7 @@ public class TelaEstados extends javax.swing.JFrame {
         txtNovaAbreviatura = new javax.swing.JTextField();
         txtEstadoCadastrado = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        btnvoltar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -64,8 +67,13 @@ public class TelaEstados extends javax.swing.JFrame {
         btnInserir.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnInserir.setText(" INSERIR");
         btnInserir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInserirActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnInserir);
-        btnInserir.setBounds(340, 80, 290, 31);
+        btnInserir.setBounds(100, 200, 190, 31);
 
         btnEditar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEditar.setText("EDITAR UM ESTADO");
@@ -76,12 +84,17 @@ public class TelaEstados extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEditar);
-        btnEditar.setBounds(340, 120, 290, 31);
+        btnEditar.setBounds(340, 100, 290, 31);
 
         btnEliminar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/delete_remove_bin_icon-icons.com_72400.png"))); // NOI18N
         btnEliminar.setText("ELIMINAR UM ESTADO");
         btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnEliminar);
         btnEliminar.setBounds(340, 40, 290, 30);
 
@@ -89,8 +102,12 @@ public class TelaEstados extends javax.swing.JFrame {
         jLabel2.setText("Nome do Estado:");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(40, 170, 108, 17);
+
+        txtAberturaEstado.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtAberturaEstado);
         txtAberturaEstado.setBounds(160, 120, 130, 31);
+
+        txtNomeEstado.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtNomeEstado);
         txtNomeEstado.setBounds(160, 160, 130, 31);
 
@@ -137,17 +154,27 @@ public class TelaEstados extends javax.swing.JFrame {
         btnEditarDados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         panelEditarEstado.add(btnEditarDados);
         btnEditarDados.setBounds(20, 220, 120, 25);
+
+        txtNovoNomeEstado.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         panelEditarEstado.add(txtNovoNomeEstado);
-        txtNovoNomeEstado.setBounds(210, 180, 90, 20);
+        txtNovoNomeEstado.setBounds(210, 180, 90, 21);
+
+        txtEditarAbreviatura.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         panelEditarEstado.add(txtEditarAbreviatura);
-        txtEditarAbreviatura.setBounds(210, 90, 90, 20);
+        txtEditarAbreviatura.setBounds(210, 90, 90, 21);
+
+        txtEditarNome.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         panelEditarEstado.add(txtEditarNome);
-        txtEditarNome.setBounds(210, 120, 90, 20);
+        txtEditarNome.setBounds(210, 120, 90, 21);
+
+        txtNovaAbreviatura.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         panelEditarEstado.add(txtNovaAbreviatura);
-        txtNovaAbreviatura.setBounds(210, 150, 90, 20);
+        txtNovaAbreviatura.setBounds(210, 150, 90, 21);
 
         getContentPane().add(panelEditarEstado);
         panelEditarEstado.setBounds(340, 160, 360, 300);
+
+        txtEstadoCadastrado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         getContentPane().add(txtEstadoCadastrado);
         txtEstadoCadastrado.setBounds(20, 270, 290, 160);
 
@@ -155,6 +182,16 @@ public class TelaEstados extends javax.swing.JFrame {
         jLabel10.setText("Estados Já cadastrados: ");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(30, 240, 180, 17);
+
+        btnvoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ic-back_97586.png"))); // NOI18N
+        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnvoltar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnvoltarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnvoltar);
+        btnvoltar.setBounds(22, 10, 60, 30);
 
         pack();
         setLocationRelativeTo(null);
@@ -164,6 +201,46 @@ public class TelaEstados extends javax.swing.JFrame {
         // TODO add your handling code here:
         panelEditarEstado.setVisible(true);
     }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnvoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnvoltarMouseClicked
+        // TODO add your handling code here:
+        TelaPrincipal telap = new TelaPrincipal();
+         this.dispose();
+        telap.setVisible(true);
+    }//GEN-LAST:event_btnvoltarMouseClicked
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        // TODO add your handling code here:
+        
+        if(txtAberturaEstado.getText().equals("")|| txtAberturaEstado == null || txtNomeEstado.getText().equals("") || txtNomeEstado == null){
+            JOptionPane.showMessageDialog(null, "Para remover um Estado é necessário inserir os dados ao lado.");
+        }
+        
+        //adicionar a logica para excluir um estado
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
+        // TODO add your handling code here:
+        
+        txtAberturaEstado.setText("");
+        txtNomeEstado.setText("");
+        txtAberturaEstado.requestFocus();
+        if(txtAberturaEstado.getText().equals("")|| txtAberturaEstado == null || txtNomeEstado.getText().equals("") || txtNomeEstado == null){
+            JOptionPane.showMessageDialog(null, "Para Adicioanr um Estado é necessário inserir os dados acima.");
+            
+        }
+        if(!(txtAberturaEstado.getText().equals("")|| txtAberturaEstado == null || txtNomeEstado.getText().equals("") || txtNomeEstado == null)){
+            JOptionPane.showMessageDialog(null, "Estado Adicionado");
+            
+            //adicionar a logica para adicionar um estado
+          
+            
+        }
+        
+        
+        
+        
+    }//GEN-LAST:event_btnInserirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,6 +282,7 @@ public class TelaEstados extends javax.swing.JFrame {
     private javax.swing.JButton btnEditarDados;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnInserir;
+    private javax.swing.JLabel btnvoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
