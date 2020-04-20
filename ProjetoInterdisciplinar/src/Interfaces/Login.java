@@ -89,7 +89,7 @@ public class Login extends javax.swing.JFrame {
         }
         if(!(txtrgm.getText().equals("") || txtrgm == null || txtpassword.getText().equals("") || txtpassword== null)){
             TelaPrincipal telap = new TelaPrincipal();
-        
+            this.dispose();
         telap.setVisible(true);
         }
         

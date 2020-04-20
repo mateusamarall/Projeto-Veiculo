@@ -5,6 +5,8 @@
  */
 package Interfaces;
 
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -42,11 +44,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnVeiculos = new javax.swing.JButton();
         btnEstados = new javax.swing.JButton();
         btnMarcasVeiculos = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        menuAjuda = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        menuAutores = new javax.swing.JMenu();
-        menuSair = new javax.swing.JMenu();
+        btnAjuda = new javax.swing.JButton();
+        jToolBar1 = new javax.swing.JToolBar();
+        btnAutores = new javax.swing.JButton();
+        btnsair = new javax.swing.JButton();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -69,7 +70,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Bem vindo. Este é o menu de opções, o que deseja fazer?.");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 10, 470, 20);
+        jLabel1.setBounds(30, 30, 470, 20);
 
         btnCadastrar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnCadastrar.setText("CADASTRO");
@@ -80,7 +81,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCadastrar);
-        btnCadastrar.setBounds(140, 60, 190, 31);
+        btnCadastrar.setBounds(280, 60, 190, 31);
 
         panelcadastro.setVisible(false);
 
@@ -100,6 +101,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnMarcasVeiculos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnMarcasVeiculos.setText("MARCAS VEÍCULOS");
         btnMarcasVeiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMarcasVeiculos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMarcasVeiculosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelcadastroLayout = new javax.swing.GroupLayout(panelcadastro);
         panelcadastro.setLayout(panelcadastroLayout);
@@ -128,39 +134,49 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(panelcadastro);
         panelcadastro.setBounds(0, 110, 490, 170);
 
-        jMenuBar1.setBackground(new java.awt.Color(240, 110, 83));
-
-        menuAjuda.setText("Ajuda");
-        menuAjuda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        jMenuItem1.setText("Sobre");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        btnAjuda.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnAjuda.setText("AJUDA");
+        btnAjuda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAjuda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                btnAjudaActionPerformed(evt);
             }
         });
-        menuAjuda.add(jMenuItem1);
+        getContentPane().add(btnAjuda);
+        btnAjuda.setBounds(60, 60, 190, 31);
 
-        jMenuBar1.add(menuAjuda);
+        jToolBar1.setRollover(true);
 
-        menuAutores.setText("Autores do Programa");
-        menuAutores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuBar1.add(menuAutores);
+        btnAutores.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btnAutores.setText("Autores do Progrma");
+        btnAutores.setFocusable(false);
+        btnAutores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAutores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAutores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAutoresActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(btnAutores);
 
-        menuSair.setText("Sair");
-        menuSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jMenuBar1.add(menuSair);
+        btnsair.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btnsair.setText("Sair");
+        btnsair.setFocusable(false);
+        btnsair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnsair.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsairActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(btnsair);
 
-        setJMenuBar(jMenuBar1);
+        getContentPane().add(jToolBar1);
+        jToolBar1.setBounds(0, 0, 580, 30);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         // TODO add your handling code here:
@@ -175,6 +191,36 @@ public class TelaPrincipal extends javax.swing.JFrame {
         TelaEstados viewEstado = new TelaEstados();
         viewEstado.setVisible(true);
     }//GEN-LAST:event_btnEstadosActionPerformed
+
+    private void btnMarcasVeiculosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMarcasVeiculosActionPerformed
+        // TODO add your handling code here:
+        
+        TelaMarcasVeiculos telamarcas = new TelaMarcasVeiculos();
+        
+        telamarcas.setVisible(true);
+    }//GEN-LAST:event_btnMarcasVeiculosActionPerformed
+
+    private void btnAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAjudaActionPerformed
+        // TODO add your handling code here:
+        
+        IntegrantesGrupo groupInte = new IntegrantesGrupo();
+        
+        groupInte.setVisible(true);
+    }//GEN-LAST:event_btnAjudaActionPerformed
+
+    private void btnsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsairActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "O Programa será fechado.");
+       System.exit(0);
+    }//GEN-LAST:event_btnsairActionPerformed
+
+    private void btnAutoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAutoresActionPerformed
+        // TODO add your handling code here:
+        
+        TelaAutoresPrograma telaAutores = new TelaAutoresPrograma();
+        
+        telaAutores.setVisible(true);
+    }//GEN-LAST:event_btnAutoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -215,22 +261,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAjuda;
+    private javax.swing.JButton btnAutores;
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnEstados;
     private javax.swing.JButton btnMarcasVeiculos;
     private javax.swing.JButton btnVeiculos;
+    private javax.swing.JButton btnsair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenu menuAjuda;
-    private javax.swing.JMenu menuAutores;
-    private javax.swing.JMenu menuSair;
+    private javax.swing.JToolBar jToolBar1;
     private javax.swing.JPanel panelcadastro;
     // End of variables declaration//GEN-END:variables
 
