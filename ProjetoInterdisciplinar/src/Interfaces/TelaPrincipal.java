@@ -5,7 +5,6 @@
  */
 package Interfaces;
 
-import javax.swing.JPanel;
 
 /**
  *
@@ -74,6 +73,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         btnCadastrar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnCadastrar.setText("CADASTRO");
+        btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
@@ -86,12 +86,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         btnVeiculos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnVeiculos.setText("VEÍCULOS");
+        btnVeiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnEstados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnEstados.setText("ESTADOS");
+        btnEstados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEstados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstadosActionPerformed(evt);
+            }
+        });
 
         btnMarcasVeiculos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnMarcasVeiculos.setText("MARCAS VEÍCULOS");
+        btnMarcasVeiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout panelcadastroLayout = new javax.swing.GroupLayout(panelcadastro);
         panelcadastro.setLayout(panelcadastroLayout);
@@ -123,6 +131,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.setBackground(new java.awt.Color(240, 110, 83));
 
         menuAjuda.setText("Ajuda");
+        menuAjuda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jMenuItem1.setText("Sobre");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -135,9 +144,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(menuAjuda);
 
         menuAutores.setText("Autores do Programa");
+        menuAutores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuBar1.add(menuAutores);
 
         menuSair.setText("Sair");
+        menuSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuBar1.add(menuSair);
 
         setJMenuBar(jMenuBar1);
@@ -157,6 +168,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         panelcadastro.setVisible(true);
         
     }//GEN-LAST:event_btnCadastrarActionPerformed
+
+    private void btnEstadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadosActionPerformed
+        // TODO add your handling code here:
+        
+        TelaEstados viewEstado = new TelaEstados();
+        viewEstado.setVisible(true);
+    }//GEN-LAST:event_btnEstadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,9 +210,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaPrincipal().setVisible(true);
-               
-                
-              
             }
         });
     }
@@ -219,5 +234,5 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel panelcadastro;
     // End of variables declaration//GEN-END:variables
 
-    
+
 }
