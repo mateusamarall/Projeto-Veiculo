@@ -35,6 +35,8 @@ public class IntegrantesGrupo extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -84,12 +86,22 @@ public class IntegrantesGrupo extends javax.swing.JFrame {
         jLabel5.setBounds(140, 90, 270, 17);
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel6.setText("Everton Alves Marques  RGM: 20690614");
+        jLabel6.setText("Gustavo Ferreira Marinho   RGM: 20477023");
         painelSobre.add(jLabel6);
-        jLabel6.setBounds(140, 120, 270, 17);
+        jLabel6.setBounds(140, 180, 290, 17);
+
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel7.setText("Everton Alves Marques  RGM: 20690614");
+        painelSobre.add(jLabel7);
+        jLabel7.setBounds(140, 120, 270, 17);
+
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel8.setText("Luis Eduardo Souza Silva   RGM: 21209375");
+        painelSobre.add(jLabel8);
+        jLabel8.setBounds(140, 150, 290, 17);
 
         getContentPane().add(painelSobre);
-        painelSobre.setBounds(10, 100, 570, 220);
+        painelSobre.setBounds(0, 100, 580, 220);
 
         pack();
         setLocationRelativeTo(null);
@@ -150,6 +162,8 @@ public class IntegrantesGrupo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel painelSobre;
     // End of variables declaration//GEN-END:variables
 }

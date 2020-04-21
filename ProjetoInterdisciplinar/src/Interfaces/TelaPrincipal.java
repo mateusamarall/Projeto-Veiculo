@@ -39,7 +39,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu6 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
-        btnCadastrar = new javax.swing.JButton();
         panelcadastro = new javax.swing.JPanel();
         btnVeiculos = new javax.swing.JButton();
         btnEstados = new javax.swing.JButton();
@@ -48,6 +47,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jToolBar1 = new javax.swing.JToolBar();
         btnAutores = new javax.swing.JButton();
         btnsair = new javax.swing.JButton();
+        btnConsultar = new javax.swing.JButton();
+        btnCadastrar = new javax.swing.JButton();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -62,8 +63,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu7.setText("jMenu7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(500, 370));
-        setMinimumSize(new java.awt.Dimension(500, 370));
+        setMaximumSize(new java.awt.Dimension(700, 370));
+        setMinimumSize(new java.awt.Dimension(700, 370));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -72,22 +73,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(30, 30, 470, 20);
 
-        btnCadastrar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        btnCadastrar.setText("CADASTRO");
-        btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCadastrarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnCadastrar);
-        btnCadastrar.setBounds(280, 60, 190, 31);
-
         panelcadastro.setVisible(false);
+        panelcadastro.setLayout(null);
 
         btnVeiculos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnVeiculos.setText("VEÍCULOS");
         btnVeiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panelcadastro.add(btnVeiculos);
+        btnVeiculos.setBounds(130, 20, 101, 38);
 
         btnEstados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnEstados.setText("ESTADOS");
@@ -97,6 +90,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 btnEstadosActionPerformed(evt);
             }
         });
+        panelcadastro.add(btnEstados);
+        btnEstados.setBounds(280, 20, 93, 38);
 
         btnMarcasVeiculos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnMarcasVeiculos.setText("MARCAS VEÍCULOS");
@@ -106,33 +101,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 btnMarcasVeiculosActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout panelcadastroLayout = new javax.swing.GroupLayout(panelcadastro);
-        panelcadastro.setLayout(panelcadastroLayout);
-        panelcadastroLayout.setHorizontalGroup(
-            panelcadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelcadastroLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(btnVeiculos)
-                .addGap(46, 46, 46)
-                .addComponent(btnEstados)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(btnMarcasVeiculos)
-                .addGap(26, 26, 26))
-        );
-        panelcadastroLayout.setVerticalGroup(
-            panelcadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelcadastroLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(panelcadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVeiculos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEstados, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMarcasVeiculos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(109, Short.MAX_VALUE))
-        );
+        panelcadastro.add(btnMarcasVeiculos);
+        btnMarcasVeiculos.setBounds(410, 20, 163, 39);
 
         getContentPane().add(panelcadastro);
-        panelcadastro.setBounds(0, 110, 490, 170);
+        panelcadastro.setBounds(0, 110, 680, 190);
 
         btnAjuda.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnAjuda.setText("AJUDA");
@@ -143,7 +116,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnAjuda);
-        btnAjuda.setBounds(60, 60, 190, 31);
+        btnAjuda.setBounds(20, 60, 190, 31);
 
         jToolBar1.setRollover(true);
 
@@ -173,6 +146,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         getContentPane().add(jToolBar1);
         jToolBar1.setBounds(0, 0, 580, 30);
+
+        btnConsultar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnConsultar.setText("CONSULTAR");
+        btnConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnConsultar);
+        btnConsultar.setBounds(470, 60, 150, 31);
+
+        btnCadastrar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnCadastrar.setText("CADASTRO");
+        btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCadastrar);
+        btnCadastrar.setBounds(250, 60, 190, 31);
 
         pack();
         setLocationRelativeTo(null);
@@ -222,6 +216,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         telaAutores.setVisible(true);
     }//GEN-LAST:event_btnAutoresActionPerformed
 
+    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+        // TODO add your handling code here:
+        
+        TelaConsultar viewconsult = new TelaConsultar();
+        
+        viewconsult.setVisible(true);
+        
+    }//GEN-LAST:event_btnConsultarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -264,6 +267,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnAjuda;
     private javax.swing.JButton btnAutores;
     private javax.swing.JButton btnCadastrar;
+    private javax.swing.JButton btnConsultar;
     private javax.swing.JButton btnEstados;
     private javax.swing.JButton btnMarcasVeiculos;
     private javax.swing.JButton btnVeiculos;
