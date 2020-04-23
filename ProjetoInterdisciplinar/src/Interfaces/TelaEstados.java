@@ -38,20 +38,10 @@ public class TelaEstados extends javax.swing.JFrame {
         txtNomeEstado = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        panelEditarEstado = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        btnEditarDados = new javax.swing.JButton();
-        txtNovoNomeEstado = new javax.swing.JTextField();
-        txtEditarAbreviatura = new javax.swing.JTextField();
-        txtEditarNome = new javax.swing.JTextField();
-        txtNovaAbreviatura = new javax.swing.JTextField();
-        txtEstadoCadastrado = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         btnvoltar = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaEstado = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -121,63 +111,6 @@ public class TelaEstados extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(390, 10, 130, 30);
 
-        panelEditarEstado.setVisible(false);
-        panelEditarEstado.setLayout(null);
-
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel6.setText("Insira os Dados:");
-        panelEditarEstado.add(jLabel6);
-        jLabel6.setBounds(20, 30, 160, 22);
-
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel5.setText("Abreviatura  anterior do Estado:");
-        panelEditarEstado.add(jLabel5);
-        jLabel5.setBounds(10, 90, 180, 15);
-
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel7.setText("Nome anterior do Estado:");
-        panelEditarEstado.add(jLabel7);
-        jLabel7.setBounds(20, 120, 160, 15);
-
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel8.setText("Nova Abreviatura:");
-        panelEditarEstado.add(jLabel8);
-        jLabel8.setBounds(20, 150, 150, 15);
-
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel9.setText("Novo Nome do Estado:");
-        panelEditarEstado.add(jLabel9);
-        jLabel9.setBounds(20, 180, 140, 15);
-
-        btnEditarDados.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnEditarDados.setText("EDITAR");
-        btnEditarDados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        panelEditarEstado.add(btnEditarDados);
-        btnEditarDados.setBounds(20, 220, 120, 25);
-
-        txtNovoNomeEstado.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        panelEditarEstado.add(txtNovoNomeEstado);
-        txtNovoNomeEstado.setBounds(210, 180, 90, 21);
-
-        txtEditarAbreviatura.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        panelEditarEstado.add(txtEditarAbreviatura);
-        txtEditarAbreviatura.setBounds(210, 90, 90, 21);
-
-        txtEditarNome.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        panelEditarEstado.add(txtEditarNome);
-        txtEditarNome.setBounds(210, 120, 90, 21);
-
-        txtNovaAbreviatura.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        panelEditarEstado.add(txtNovaAbreviatura);
-        txtNovaAbreviatura.setBounds(210, 150, 90, 21);
-
-        getContentPane().add(panelEditarEstado);
-        panelEditarEstado.setBounds(340, 160, 360, 300);
-
-        txtEstadoCadastrado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        getContentPane().add(txtEstadoCadastrado);
-        txtEstadoCadastrado.setBounds(20, 270, 290, 160);
-
         jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel10.setText("Estados Já cadastrados: ");
         getContentPane().add(jLabel10);
@@ -193,13 +126,29 @@ public class TelaEstados extends javax.swing.JFrame {
         getContentPane().add(btnvoltar);
         btnvoltar.setBounds(22, 10, 60, 30);
 
+        tabelaEstado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "ABREVIATURA DO ESTADO", "ESTADO"
+            }
+        ));
+        jScrollPane1.setViewportView(tabelaEstado);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(30, 270, 460, 230);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
-        panelEditarEstado.setVisible(true);
+       
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnvoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnvoltarMouseClicked
@@ -279,7 +228,6 @@ public class TelaEstados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnEditarDados;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnInserir;
     private javax.swing.JLabel btnvoltar;
@@ -288,18 +236,9 @@ public class TelaEstados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel panelEditarEstado;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabelaEstado;
     private javax.swing.JTextField txtAberturaEstado;
-    private javax.swing.JTextField txtEditarAbreviatura;
-    private javax.swing.JTextField txtEditarNome;
-    private javax.swing.JTextField txtEstadoCadastrado;
     private javax.swing.JTextField txtNomeEstado;
-    private javax.swing.JTextField txtNovaAbreviatura;
-    private javax.swing.JTextField txtNovoNomeEstado;
     // End of variables declaration//GEN-END:variables
 }

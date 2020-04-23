@@ -52,7 +52,6 @@ public class TelaMarcasVeiculos extends javax.swing.JFrame {
         btnvoltar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setResizable(false);
         getContentPane().setLayout(null);
@@ -65,7 +64,7 @@ public class TelaMarcasVeiculos extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel4.setText("Marca do carro:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 140, 120, 17);
+        jLabel4.setBounds(40, 140, 120, 17);
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("Modelo do carro:");
@@ -225,6 +224,7 @@ public class TelaMarcasVeiculos extends javax.swing.JFrame {
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
         panelEditarMarca.setVisible(true);
+        
     }//GEN-LAST:event_btnEditarActionPerformed
 
     /**

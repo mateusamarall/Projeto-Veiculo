@@ -34,37 +34,37 @@ public class TelaConsultar extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         panelPlaca = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtareaplaca = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         txtconsultplaca = new javax.swing.JTextField();
         btnconsultplaca = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tabelaPlaca = new javax.swing.JTable();
         consultaPlaca = new javax.swing.JButton();
         consultaPreco = new javax.swing.JButton();
         consultaMarca = new javax.swing.JButton();
         consultaModelo = new javax.swing.JButton();
         panelMarca = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        txtareamarca = new javax.swing.JTextArea();
         jLabel14 = new javax.swing.JLabel();
         txtconsultamarca = new javax.swing.JTextField();
         btnconsultamarca = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tabelaMarca = new javax.swing.JTable();
         panelModelo = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        txtareamodelo = new javax.swing.JTextArea();
         jLabel16 = new javax.swing.JLabel();
         txtconsultamodelo = new javax.swing.JTextField();
         btnconsultamodelo = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tabelaModelo = new javax.swing.JTable();
         panelPreco = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        txtareapreco = new javax.swing.JTextArea();
         jLabel18 = new javax.swing.JLabel();
         txtconsultapreco = new javax.swing.JTextField();
         btnconsultapreco = new javax.swing.JButton();
         txtconsultapreco2 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tabelaPreco = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1583, 780));
@@ -94,14 +94,6 @@ public class TelaConsultar extends javax.swing.JFrame {
         panelPlaca.add(jLabel7);
         jLabel7.setBounds(19, 11, 310, 25);
 
-        txtareaplaca.setColumns(20);
-        txtareaplaca.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtareaplaca.setRows(5);
-        jScrollPane2.setViewportView(txtareaplaca);
-
-        panelPlaca.add(jScrollPane2);
-        jScrollPane2.setBounds(180, 100, 260, 130);
-
         jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel8.setText("Informações encontradas");
         panelPlaca.add(jLabel8);
@@ -121,6 +113,22 @@ public class TelaConsultar extends javax.swing.JFrame {
         });
         panelPlaca.add(btnconsultplaca);
         btnconsultplaca.setBounds(30, 80, 110, 23);
+
+        tabelaPlaca.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "MODELO", "MARCA", "PREÇO", "LOJA", "PLACA", "ANO", "ESTADO"
+            }
+        ));
+        jScrollPane9.setViewportView(tabelaPlaca);
+
+        panelPlaca.add(jScrollPane9);
+        jScrollPane9.setBounds(70, 110, 370, 130);
 
         getContentPane().add(panelPlaca);
         panelPlaca.setBounds(340, 60, 440, 240);
@@ -176,14 +184,6 @@ public class TelaConsultar extends javax.swing.JFrame {
         panelMarca.add(jLabel13);
         jLabel13.setBounds(19, 11, 310, 25);
 
-        txtareamarca.setColumns(20);
-        txtareamarca.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtareamarca.setRows(5);
-        jScrollPane6.setViewportView(txtareamarca);
-
-        panelMarca.add(jScrollPane6);
-        jScrollPane6.setBounds(180, 100, 260, 130);
-
         jLabel14.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel14.setText("Informações encontradas");
         panelMarca.add(jLabel14);
@@ -204,6 +204,22 @@ public class TelaConsultar extends javax.swing.JFrame {
         panelMarca.add(btnconsultamarca);
         btnconsultamarca.setBounds(30, 80, 110, 23);
 
+        tabelaMarca.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "MODELO", "MARCA", "PREÇO", "LOJA", "PLACA", "ANO", "ESTADO"
+            }
+        ));
+        jScrollPane4.setViewportView(tabelaMarca);
+
+        panelMarca.add(jScrollPane4);
+        jScrollPane4.setBounds(70, 110, 370, 130);
+
         getContentPane().add(panelMarca);
         panelMarca.setBounds(1060, 80, 450, 240);
 
@@ -214,14 +230,6 @@ public class TelaConsultar extends javax.swing.JFrame {
         jLabel15.setText("Por favor digite o modelo para consultar");
         panelModelo.add(jLabel15);
         jLabel15.setBounds(19, 11, 330, 25);
-
-        txtareamodelo.setColumns(20);
-        txtareamodelo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtareamodelo.setRows(5);
-        jScrollPane7.setViewportView(txtareamodelo);
-
-        panelModelo.add(jScrollPane7);
-        jScrollPane7.setBounds(180, 100, 260, 130);
 
         jLabel16.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel16.setText("Informações encontradas");
@@ -243,6 +251,22 @@ public class TelaConsultar extends javax.swing.JFrame {
         panelModelo.add(btnconsultamodelo);
         btnconsultamodelo.setBounds(30, 80, 110, 23);
 
+        tabelaModelo.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "MODELO", "MARCA", "PREÇO", "LOJA", "PLACA", "ANO", "ESTADO"
+            }
+        ));
+        jScrollPane5.setViewportView(tabelaModelo);
+
+        panelModelo.add(jScrollPane5);
+        jScrollPane5.setBounds(80, 110, 370, 130);
+
         getContentPane().add(panelModelo);
         panelModelo.setBounds(340, 390, 450, 240);
 
@@ -253,14 +277,6 @@ public class TelaConsultar extends javax.swing.JFrame {
         jLabel17.setText("Por favor digite o preço inicial e final para consultar");
         panelPreco.add(jLabel17);
         jLabel17.setBounds(19, 11, 420, 25);
-
-        txtareapreco.setColumns(20);
-        txtareapreco.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        txtareapreco.setRows(5);
-        jScrollPane8.setViewportView(txtareapreco);
-
-        panelPreco.add(jScrollPane8);
-        jScrollPane8.setBounds(180, 100, 260, 130);
 
         jLabel18.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel18.setText("Informações encontradas");
@@ -284,8 +300,24 @@ public class TelaConsultar extends javax.swing.JFrame {
         panelPreco.add(txtconsultapreco2);
         txtconsultapreco2.setBounds(30, 80, 120, 20);
 
+        tabelaPreco.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "MODELO", "MARCA", "PREÇO", "LOJA", "PLACA", "ANO", "ESTADO"
+            }
+        ));
+        jScrollPane3.setViewportView(tabelaPreco);
+
+        panelPreco.add(jScrollPane3);
+        jScrollPane3.setBounds(80, 140, 440, 160);
+
         getContentPane().add(panelPreco);
-        panelPreco.setBounds(1060, 420, 450, 240);
+        panelPreco.setBounds(1060, 420, 520, 300);
 
         pack();
         setLocationRelativeTo(null);
@@ -404,18 +436,18 @@ public class TelaConsultar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JPanel panelMarca;
     private javax.swing.JPanel panelModelo;
     private javax.swing.JPanel panelPlaca;
     private javax.swing.JPanel panelPreco;
-    private javax.swing.JTextArea txtareamarca;
-    private javax.swing.JTextArea txtareamodelo;
-    private javax.swing.JTextArea txtareaplaca;
-    private javax.swing.JTextArea txtareapreco;
+    private javax.swing.JTable tabelaMarca;
+    private javax.swing.JTable tabelaModelo;
+    private javax.swing.JTable tabelaPlaca;
+    private javax.swing.JTable tabelaPreco;
     private javax.swing.JTextField txtconsultamarca;
     private javax.swing.JTextField txtconsultamodelo;
     private javax.swing.JTextField txtconsultapreco;
