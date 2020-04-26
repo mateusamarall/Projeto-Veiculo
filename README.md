@@ -4,7 +4,7 @@
 
 <h1>:computer: Techs</h1>
 <b> :coffee: Java</b> <br/>
-<b> :floppy_disk:	 BD Oracle </b> 
+<b> :floppy_disk:	 MYSQL </b> 
 
 <H3> Participantes</h3>
 :octocat: <a href="https://github.com/GustavoSMelo">Gustavo</a> <br/>
