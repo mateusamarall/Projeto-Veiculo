@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces;
+package Views;
 
 import javax.swing.JOptionPane;
 
@@ -81,14 +81,14 @@ public class TelaMarcasVeiculos extends javax.swing.JFrame {
 
         btnInserir.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnInserir.setText(" INSERIR");
-        btnInserir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInserir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnInserir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInserirActionPerformed(evt);
             }
         });
         getContentPane().add(btnInserir);
-        btnInserir.setBounds(90, 220, 190, 31);
+        btnInserir.setBounds(90, 220, 190, 38);
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setText("Você Deseja:");
@@ -98,7 +98,7 @@ public class TelaMarcasVeiculos extends javax.swing.JFrame {
         btnEliminar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/delete_remove_bin_icon-icons.com_72400.png"))); // NOI18N
         btnEliminar.setText("ELIMINAR UMA MARCA");
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -109,14 +109,14 @@ public class TelaMarcasVeiculos extends javax.swing.JFrame {
 
         btnEditar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEditar.setText("EDITAR UMA MARCA");
-        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
             }
         });
         getContentPane().add(btnEditar);
-        btnEditar.setBounds(340, 100, 290, 31);
+        btnEditar.setBounds(340, 100, 290, 38);
 
         panelEditarMarca.setVisible(false);
         panelEditarMarca.setLayout(null);
@@ -148,31 +148,31 @@ public class TelaMarcasVeiculos extends javax.swing.JFrame {
 
         btnEditarDados.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btnEditarDados.setText("EDITAR");
-        btnEditarDados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarDados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panelEditarMarca.add(btnEditarDados);
-        btnEditarDados.setBounds(40, 230, 120, 25);
+        btnEditarDados.setBounds(40, 230, 120, 33);
 
         txtNovoModelo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         panelEditarMarca.add(txtNovoModelo);
-        txtNovoModelo.setBounds(160, 180, 90, 21);
+        txtNovoModelo.setBounds(160, 180, 90, 23);
 
         txtEditarMarca.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         panelEditarMarca.add(txtEditarMarca);
-        txtEditarMarca.setBounds(160, 90, 90, 21);
+        txtEditarMarca.setBounds(160, 90, 90, 23);
 
         txtEditarModelo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         panelEditarMarca.add(txtEditarModelo);
-        txtEditarModelo.setBounds(160, 120, 90, 21);
+        txtEditarModelo.setBounds(160, 120, 90, 23);
 
         txtNovaMarca.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         panelEditarMarca.add(txtNovaMarca);
-        txtNovaMarca.setBounds(160, 150, 90, 21);
+        txtNovaMarca.setBounds(160, 150, 90, 23);
 
         getContentPane().add(panelEditarMarca);
         panelEditarMarca.setBounds(340, 150, 360, 300);
 
         btnvoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ic-back_97586.png"))); // NOI18N
-        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnvoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnvoltarMouseClicked(evt);

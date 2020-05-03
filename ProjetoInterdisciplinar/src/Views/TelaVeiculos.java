@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces;
+package Views;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -59,14 +59,13 @@ public class TelaVeiculos extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 800));
         setMinimumSize(new java.awt.Dimension(800, 800));
         setResizable(false);
 
         jPanel1.setLayout(null);
 
         btnvoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ic-back_97586.png"))); // NOI18N
-        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnvoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnvoltarMouseClicked(evt);
@@ -88,7 +87,7 @@ public class TelaVeiculos extends javax.swing.JFrame {
         btnEliminarVeiculo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEliminarVeiculo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/delete_remove_bin_icon-icons.com_72400.png"))); // NOI18N
         btnEliminarVeiculo.setText("ELIMINAR UM VEICULO");
-        btnEliminarVeiculo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliminarVeiculo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEliminarVeiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarVeiculoActionPerformed(evt);
@@ -99,14 +98,14 @@ public class TelaVeiculos extends javax.swing.JFrame {
 
         btnEditarVeiculo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnEditarVeiculo.setText("EDITAR UM VEÍCULO");
-        btnEditarVeiculo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarVeiculo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEditarVeiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarVeiculoActionPerformed(evt);
             }
         });
         jPanel1.add(btnEditarVeiculo);
-        btnEditarVeiculo.setBounds(400, 100, 290, 31);
+        btnEditarVeiculo.setBounds(400, 100, 290, 38);
 
         txtAbreviaturaEstado.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jPanel1.add(txtAbreviaturaEstado);
@@ -123,14 +122,14 @@ public class TelaVeiculos extends javax.swing.JFrame {
 
         btnInserirVeiculo.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnInserirVeiculo.setText(" INSERIR");
-        btnInserirVeiculo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInserirVeiculo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnInserirVeiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInserirVeiculoActionPerformed(evt);
             }
         });
         jPanel1.add(btnInserirVeiculo);
-        btnInserirVeiculo.setBounds(30, 390, 280, 31);
+        btnInserirVeiculo.setBounds(30, 390, 280, 38);
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel10.setText("Veículos Já cadastrados: ");
@@ -196,7 +195,7 @@ public class TelaVeiculos extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tabelaVeiculo);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(20, 480, 452, 402);
+        jScrollPane1.setBounds(20, 480, 453, 402);
 
         jLabel20.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel20.setText("Abreviatura do Estado:");

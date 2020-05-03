@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces;
+package Views;
 
 import javax.swing.JOptionPane;
 
@@ -63,7 +63,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu7.setText("jMenu7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(700, 370));
         setMinimumSize(new java.awt.Dimension(700, 370));
         setResizable(false);
         getContentPane().setLayout(null);
@@ -78,45 +77,45 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         btnVeiculos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnVeiculos.setText("VEÍCULOS");
-        btnVeiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVeiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         panelcadastro.add(btnVeiculos);
-        btnVeiculos.setBounds(130, 20, 101, 38);
+        btnVeiculos.setBounds(10, 20, 110, 38);
 
         btnEstados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnEstados.setText("ESTADOS");
-        btnEstados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEstados.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEstados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEstadosActionPerformed(evt);
             }
         });
         panelcadastro.add(btnEstados);
-        btnEstados.setBounds(280, 20, 93, 38);
+        btnEstados.setBounds(180, 20, 110, 38);
 
         btnMarcasVeiculos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnMarcasVeiculos.setText("MARCAS VEÍCULOS");
-        btnMarcasVeiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMarcasVeiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnMarcasVeiculos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMarcasVeiculosActionPerformed(evt);
             }
         });
         panelcadastro.add(btnMarcasVeiculos);
-        btnMarcasVeiculos.setBounds(410, 20, 163, 39);
+        btnMarcasVeiculos.setBounds(380, 20, 200, 39);
 
         getContentPane().add(panelcadastro);
-        panelcadastro.setBounds(0, 110, 680, 190);
+        panelcadastro.setBounds(50, 100, 680, 190);
 
         btnAjuda.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnAjuda.setText("AJUDA");
-        btnAjuda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAjuda.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnAjuda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAjudaActionPerformed(evt);
             }
         });
         getContentPane().add(btnAjuda);
-        btnAjuda.setBounds(20, 60, 190, 31);
+        btnAjuda.setBounds(20, 60, 190, 38);
 
         jToolBar1.setRollover(true);
 
@@ -155,18 +154,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnConsultar);
-        btnConsultar.setBounds(470, 60, 150, 31);
+        btnConsultar.setBounds(470, 60, 170, 38);
 
         btnCadastrar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnCadastrar.setText("CADASTRO");
-        btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCadastrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
             }
         });
         getContentPane().add(btnCadastrar);
-        btnCadastrar.setBounds(250, 60, 190, 31);
+        btnCadastrar.setBounds(250, 60, 190, 38);
 
         pack();
         setLocationRelativeTo(null);

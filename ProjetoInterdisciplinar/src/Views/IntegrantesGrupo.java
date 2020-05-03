@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces;
+package Views;
 
 /**
  *
@@ -41,24 +41,23 @@ public class IntegrantesGrupo extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(550, 450));
         setMinimumSize(new java.awt.Dimension(550, 450));
         setResizable(false);
         getContentPane().setLayout(null);
 
         btnsobre.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnsobre.setText("SOBRE");
-        btnsobre.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnsobre.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnsobre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsobreActionPerformed(evt);
             }
         });
         getContentPane().add(btnsobre);
-        btnsobre.setBounds(190, 40, 190, 31);
+        btnsobre.setBounds(190, 40, 190, 38);
 
         btnvoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ic-back_97586.png"))); // NOI18N
-        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnvoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnvoltarMouseClicked(evt);

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces;
+package Views;
 
 import javax.swing.JOptionPane;
 
@@ -32,11 +32,10 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txtpassword = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtrgm = new javax.swing.JTextField();
+        txtLogin = new javax.swing.JTextField();
         btnlogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(400, 400));
         setMinimumSize(new java.awt.Dimension(400, 400));
         setResizable(false);
         getContentPane().setLayout(null);
@@ -51,43 +50,43 @@ public class Login extends javax.swing.JFrame {
         txtpassword.setBounds(130, 120, 180, 40);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setText("RGM:");
+        jLabel3.setText("LOGIN");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(60, 60, 60, 22);
 
-        txtrgm.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(txtrgm);
-        txtrgm.setBounds(130, 50, 180, 40);
+        txtLogin.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(txtLogin);
+        txtLogin.setBounds(130, 50, 180, 40);
 
         btnlogin.setBackground(new java.awt.Color(255, 255, 255));
         btnlogin.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnlogin.setText("LOG IN");
         btnlogin.setBorder(null);
-        btnlogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnlogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnloginActionPerformed(evt);
             }
         });
         getContentPane().add(btnlogin);
-        btnlogin.setBounds(150, 210, 120, 40);
+        btnlogin.setBounds(130, 200, 120, 40);
 
-        pack();
+        setSize(new java.awt.Dimension(416, 307));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
         // TODO add your handling code here:
-        if(txtrgm.getText().equals("") || txtrgm == null || txtpassword.getText().equals("") || txtpassword== null){
+        if(txtLogin.getText().equals("") || txtLogin == null || txtpassword.getText().equals("") || txtpassword== null){
             
-            txtrgm.setText("");
+            txtLogin.setText("");
             txtpassword.setText("");
-            txtrgm.requestFocus();
+            txtLogin.requestFocus();
             
             JOptionPane.showMessageDialog(null, "Usuário não encontrado digite novamente");
             
         }
-        if(!(txtrgm.getText().equals("") || txtrgm == null || txtpassword.getText().equals("") || txtpassword== null)){
+        if(!(txtLogin.getText().equals("") || txtLogin == null || txtpassword.getText().equals("") || txtpassword== null)){
             TelaPrincipal telap = new TelaPrincipal();
             this.dispose();
         telap.setVisible(true);
@@ -134,7 +133,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnlogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField txtLogin;
     private javax.swing.JTextField txtpassword;
-    private javax.swing.JTextField txtrgm;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces;
+package Views;
 
 import javax.swing.JOptionPane;
 
@@ -67,12 +67,11 @@ public class TelaConsultar extends javax.swing.JFrame {
         tabelaPreco = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1583, 780));
         setMinimumSize(new java.awt.Dimension(1583, 780));
         getContentPane().setLayout(null);
 
         btnvoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/ic-back_97586.png"))); // NOI18N
-        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnvoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnvoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnvoltarMouseClicked(evt);
@@ -105,14 +104,14 @@ public class TelaConsultar extends javax.swing.JFrame {
 
         btnconsultplaca.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnconsultplaca.setText("CONSULTAR");
-        btnconsultplaca.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnconsultplaca.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnconsultplaca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnconsultplacaActionPerformed(evt);
             }
         });
         panelPlaca.add(btnconsultplaca);
-        btnconsultplaca.setBounds(30, 80, 110, 23);
+        btnconsultplaca.setBounds(30, 80, 110, 31);
 
         tabelaPlaca.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -135,25 +134,25 @@ public class TelaConsultar extends javax.swing.JFrame {
 
         consultaPlaca.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         consultaPlaca.setText("PLACA");
-        consultaPlaca.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        consultaPlaca.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         consultaPlaca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 consultaPlacaActionPerformed(evt);
             }
         });
         getContentPane().add(consultaPlaca);
-        consultaPlaca.setBounds(240, 150, 90, 25);
+        consultaPlaca.setBounds(240, 150, 90, 33);
 
         consultaPreco.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         consultaPreco.setText("PREÇO");
-        consultaPreco.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        consultaPreco.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         consultaPreco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 consultaPrecoActionPerformed(evt);
             }
         });
         getContentPane().add(consultaPreco);
-        consultaPreco.setBounds(950, 510, 100, 25);
+        consultaPreco.setBounds(950, 510, 100, 33);
 
         consultaMarca.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         consultaMarca.setText("MARCA");
@@ -163,18 +162,18 @@ public class TelaConsultar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(consultaMarca);
-        consultaMarca.setBounds(960, 170, 90, 25);
+        consultaMarca.setBounds(960, 170, 90, 33);
 
         consultaModelo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         consultaModelo.setText("MODELO");
-        consultaModelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        consultaModelo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         consultaModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 consultaModeloActionPerformed(evt);
             }
         });
         getContentPane().add(consultaModelo);
-        consultaModelo.setBounds(240, 480, 100, 25);
+        consultaModelo.setBounds(240, 480, 100, 33);
 
         panelMarca.setVisible(false);
         panelMarca.setLayout(null);
@@ -195,14 +194,14 @@ public class TelaConsultar extends javax.swing.JFrame {
 
         btnconsultamarca.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnconsultamarca.setText("CONSULTAR");
-        btnconsultamarca.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnconsultamarca.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnconsultamarca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnconsultamarcaActionPerformed(evt);
             }
         });
         panelMarca.add(btnconsultamarca);
-        btnconsultamarca.setBounds(30, 80, 110, 23);
+        btnconsultamarca.setBounds(30, 80, 110, 31);
 
         tabelaMarca.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -242,14 +241,14 @@ public class TelaConsultar extends javax.swing.JFrame {
 
         btnconsultamodelo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnconsultamodelo.setText("CONSULTAR");
-        btnconsultamodelo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnconsultamodelo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnconsultamodelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnconsultamodeloActionPerformed(evt);
             }
         });
         panelModelo.add(btnconsultamodelo);
-        btnconsultamodelo.setBounds(30, 80, 110, 23);
+        btnconsultamodelo.setBounds(30, 80, 110, 31);
 
         tabelaModelo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -289,16 +288,16 @@ public class TelaConsultar extends javax.swing.JFrame {
 
         btnconsultapreco.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         btnconsultapreco.setText("CONSULTAR");
-        btnconsultapreco.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnconsultapreco.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnconsultapreco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnconsultaprecoActionPerformed(evt);
             }
         });
         panelPreco.add(btnconsultapreco);
-        btnconsultapreco.setBounds(30, 110, 110, 23);
+        btnconsultapreco.setBounds(30, 110, 110, 31);
         panelPreco.add(txtconsultapreco2);
-        txtconsultapreco2.setBounds(30, 80, 120, 20);
+        txtconsultapreco2.setBounds(30, 80, 120, 24);
 
         tabelaPreco.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
